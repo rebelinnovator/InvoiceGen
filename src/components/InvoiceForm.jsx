@@ -79,9 +79,6 @@ const InvoiceForm = ()=>{
             pdf.addImage(imgData, 'PNG', 0, 0, pdfWidth, pdfHeight);
             pdf.save('invoice-001.pdf');
         });
-        
-        //*
-
     }
     return (
         <>
@@ -91,28 +88,7 @@ const InvoiceForm = ()=>{
                 <Card className="mt-5 p-4">
                     <InvoiceHeader info={hInfo} onChange={setHInfo}/>
                     <ItemBox items={items} onAddRow={handleAddItem} onEditRow={handleEditItem} onDeleteRow={handleDeleteItem}/>
-                    {/* <Row className='mt-3'>
-                        <Col md={4}>
-                            <p className='h5'>SDC INFORMATION</p>
-                            <hr/>
-                            <p className='h6'>SDC Date:19-05-2023</p>
-                            <p className='h6'>SDC id:SDC01400061</p>
-                            <p className='h6'>Receipt Number:954/979</p>
-                        </Col>
-                        <Col md={4}>
-                            <p className='h5'>BANK ACCOUNTS</p>
-                            <hr/>
-                            <p className='h6'>MOMOPY:19-05-2023</p>
-                            <p className='h6'>I & M BANK:SDC01400061</p>
-                            <p className='h6'>COGEBANK:954/979</p>
-                        </Col>
-                        <Col md={4}>
-                            <p className='h5'>RRA NOTICE</p>
-                            <hr/>
-                            <p className='h6'>Iyi nyemezabuguzi</p>
-                            <p className='h6'>This inovice is approved by RRA</p>
-                        </Col>
-                    </Row> */}
+                    {/* Preivew Part */}
                     <Row className='mt-3'>
                         <Col md={12}>
                             <span className='h4'>Preview</span>
@@ -121,8 +97,9 @@ const InvoiceForm = ()=>{
                                     <div className='d-flex invoice-header'>
                                         <div className='d-flex'>
                                             <img src='/rra.png'/>
-                                            <div className=''>
-                                                <p className='p-invoice-font-size-1'>USOPHARMA LTD</p>
+                                            <div className='invoice-header-info'>
+                                                {/* Mock DATA */}
+                                                <p className='p-invoice-font-size-1'>USOPHARMA LTD</p> 
                                                 <p className='p-invoice-font-size-2'>Tin:{hInfo.tin}</p>
                                                 <p className='p-invoice-font-size-2'>Tel:+{hInfo.tel}</p>
                                                 <p className='p-invoice-font-size-2'>Email:{hInfo.email}</p>
@@ -133,12 +110,14 @@ const InvoiceForm = ()=>{
                                     </div>
                                     <div className="client-info">
                                         <div className='sideDiv invoice-client-info'>
+                                            {/* Mock DATA */}
                                             <p>
                                                 NO CLIENT INFO
                                             </p>
                                         </div>
                                         <img src='/mark.png'/>
                                         <div className='sideDiv'>
+                                            {/* Mock DATA */}
                                             <p className='t_right p-invoice-font-size-1'>
                                             NORMAL SALE RECEIPT
                                             </p>
@@ -151,6 +130,7 @@ const InvoiceForm = ()=>{
                                         </div>
                                     </div>
                                     <div className="d-flex justify-content-between">
+                                        {/* Mock DATA */}
                                         <p className='p-invoice-font-size-1'>Served By:SANTUS</p>
                                         <p className='p-invoice-font-size-1'>Mean Of Payment CASH</p>
                                     </div>
@@ -187,6 +167,7 @@ const InvoiceForm = ()=>{
                                     </div>
                                     <div className='p-table'>
                                         <div className='p-table-header'>
+                                                {/* Mock DATA */}
                                                 <div className='p-table-row'>
                                                     <div className='p-table-cell p-invoice-font-size-1' style={{width:"15%"}}>Total A-EX Amt</div>
                                                     <div className='p-table-cell p-invoice-font-size-1' style={{width:"15%"}}>Total B-18% Amt</div>
@@ -209,7 +190,7 @@ const InvoiceForm = ()=>{
                                         <p>ITEMS NUMBER: 1</p>
                                         <div className='d-flex justify-content-between' style={{width:"100%", gap:"5px"}}>
                                             <div className='bottom-info-item'>
-
+                                                {/* Mock DATA */}
                                                 <p className='dash-style'>SDC INFORMATION</p>
                                                 <p>
                                                     SDC Date:19-05-2023 09:52:10<br/>

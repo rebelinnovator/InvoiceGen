@@ -39,12 +39,6 @@ html,
   right: 0px;
 }
 
-.invoice{ 
-  background-color: #e3e6e9;
-  padding: 8px;
-  margin-top: 14px;
-  border-radius: 10px;
-}
 
 .image{
   height: 15px;
@@ -55,14 +49,6 @@ html,
   cursor: pointer;
 }
 
-
-.invoice div{
-  width: 90%;
-  margin: auto auto;
-  margin-top: 4px;
-  position: relative;
-  font-family: sans-serif;
-}
 
 .icons{
   margin: auto auto;
