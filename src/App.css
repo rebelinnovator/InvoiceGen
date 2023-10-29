@@ -1,38 +1,277 @@
+body, html {
+  font-size: 0.9rem;
+  background: #f2f3f7
+}
+body, .form-control {
+  font-size: 0.9rem
+}
+body,
+html,
+#root,
 .App {
-  text-align: center;
+  min-height: 100vh
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.btn {
+  font-size: 0.9rem;
+  font-weight: 500;
+  padding: 0.66rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 .1rem .1rem rgba(0,0,0,.05)!important
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
 .App-link {
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.App{
+  background: url('https://images.ctfassets.net/ifu905unnj2g/4EPQDIZAwMKSAAKeEao84E/4b26cf630da967ea0d86c7581e53767c/Pie_Chart_and_Calculator_Green_Background-min.png');
+}
+.invoiceGenerator{
+  text-align: right;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  color: #394a57;
+}
+
+.btn-light {
+  border-color: #dedede
+}
+.right{
+  position: absolute;
+  right: 0px;
+}
+
+.invoice{ 
+  background-color: #e3e6e9;
+  padding: 8px;
+  margin-top: 14px;
+  border-radius: 10px;
+}
+
+.image{
+  height: 15px;
+  margin-left: 10px;
+}
+
+.image:hover{
+  cursor: pointer;
+}
+
+
+.invoice div{
+  width: 90%;
+  margin: auto auto;
+  margin-top: 4px;
+  position: relative;
+  font-family: sans-serif;
+}
+
+.icons{
+  margin: auto auto;
+  text-align: center;
+}
+
+.btn-light:hover {
+  border-color: #dedede;
+  background-color: #f3f3f3
+}
+
+.shadow {
+  box-shadow: 0 .1rem .1rem rgba(0,0,0,.05)!important
+}
+
+.modal-content,
+.card {
+  overflow: hidden;
+  border-radius: 0.756rem
+}
+
+hr {
+  opacity: 0.1
+}
+
+.table th {
+  border-top: 1px solid #0000001a;
+  border-bottom: 1px solid #0000001a;
+  border-bottom-color: #0000001a!important
+}
+.table td {
+   text-align: left;
+}
+.table tr th:first-child,
+.table tr td:first-child {
+  padding-left: 0
+}
+.table tr th:last-child,
+.table tr td:last-child {
+  padding-right: 0
+}
+
+.form-control {
+  background: #f5f7f9;
+  font-weight: 400;
+  padding: .5rem .75rem;
+  border: none
+}
+.form-control:hover {
+  background: #f5f7f9;
+}
+.form-control::placeholder,
+.form-control::-ms-input-placeholder,
+.form-control:-ms-input-placeholder {
+  color: #9fa8b0
+}
+.form-control:focus {
+  background: #f5f7f9;
+}
+
+#invoiceCapture {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  padding-top: 5px;
+}
+
+
+.p-invoice{
+  background: white;
+  border: 1px solid black;
+  border-radius: 15px;
+  border: 2px solid;
+  margin: 20px;
+  padding: 5px;
+  aspect-ratio: 210/297;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+.p-invoice-font-size-1{
+  font-size: 25px;
+  font-weight: bold;
+  margin-bottom: 0px;
+}
+.p-invoice-font-size-2{
+  font-size: 20px;
+}
+.p-invoice-font-size-3{
+  font-size: 17px;
+}
+
+.p-invoice .invoice-header{
+  padding: 40px 10px 20px 10px;
+  justify-content: space-between;
+  border-bottom: 2px solid;
+  font-weight: bold;
+}
+.p-invoice .invoice-header p{
+  margin-bottom: 0px;
+}
+.client-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.sideDiv{
+  width: 45%;
+  border: 1px solid grey;
+  border-radius: 7px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  padding: 5px;
+}
+.invoice-client-info{
+  display: flex;
+  justify-content: start;
+  font-size: 30px;
+}
+.t_right{
+  text-align: right;
+}
+
+/*table*/
+table{
+  width: 100%;
+}
+.p-table{
+  
+}
+.item-table{
+  flex-grow: 3;
+}
+.p-table .p-table-header{
+  background-color: #bbb;
+  font-weight: bold;
+}
+.p-table .p-table-body{
+  height: 100%;
+}
+.p-table .p-table-row{
+  display: flex;
+  gap: 3px;
+  margin-bottom: 3px;
+}
+.p-table .p-table-row .p-table-cell{
+  border: 1px solid grey;
+  border-radius: 5px;
+  text-align: center;
+}
+.p-table .p-table-row .p-table-row-code{
+  width:15%;
+}
+.p-table .p-table-row .p-table-row-desc{
+  width:30%;
+}
+.p-table .p-table-row .p-table-row-tax{
+  width:5%;
+}
+.p-table .p-table-row .p-table-row-batch{
+  width:10%;
+}
+.p-table .p-table-row .p-table-row-expry{
+  width:10%;
+}
+.p-table .p-table-row .p-table-row-qty{
+  width:5%;
+}
+.p-table .p-table-row .p-table-row-uprice{
+  width:15%;
+}
+.p-table .p-table-row .p-table-row-tprice{
+  width:15%;
+}
+
+thead tr{
+  width: 100%;
+}
+thead tr td{
+  background-color: #aaa;
+  color: black;
+  border: 1px solid grey;
+  border-radius: 7px;
+  text-align: center;
+  font-weight: bold;
+}
+
+tbody tr td{
+  color: black;
+  border: 1px solid grey;
+  border-radius: 7px;
+  text-align: center;
+}
+
+.bottom-info-item{
+  border: 1px solid grey;
+  border-radius: 7px;
+  width: 33%;
+}
+.print-text{
+  font-weight: bold;
+  margin-left: 10px;
+}
+
+.dash-style{
+  border-bottom: 1px dashed black;
+  padding-bottom: 10px;
 }
